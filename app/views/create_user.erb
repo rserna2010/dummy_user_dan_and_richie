@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Welcome to the first day of your life!</h1>
+  <p>Are you worthy?! Enter your info below:</p>
+
+  <form action='/users' method='post'>
+    <table id="login_form">
+    <tr>
+    <td>Full Name:</td>
+    <td><input type="text" name="name" value=<%= @name %>></td></tr>
+    <tr>
+    <td>Email:</td>
+    <td><input type="text" name="email" value=<%= @email %>></td></tr>
+    <tr>
+    <td>Password:</td>
+    <td><input type="password" name="password"></td></tr>
+    <tr>
+    <td>Reconfirm Password:</td>
+    <td><input type="password" name="password_confirmation"></td></tr>
+    </table><br>
+    <input type="submit" value="God Speed!">
+  </form>
+
+  <% if @message %>
+    <p><strong><%= @message %></strong></p> 
+  <% end %>
+</div>

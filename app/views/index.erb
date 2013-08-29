@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Welcome to the super duper secret club!</h1>
+  <p>Please enter your super duper secret password below!</p>
+
+  <form action='/login' method='post'>
+    <table id="login_form">
+    <tr>
+    <td>Email:</td>
+    <td><input type="email" name="email"></td></tr>
+    <tr>
+    <td>Password:</td>
+    <td><input type="password" name="password"></td></tr>
+    </table><br>
+    <input type="submit" value="Thumbs Up!">
+  </form>
+  <br>
+  <a href="/users/new">Join the Club</a>
+
+  <% if @status %>
+    <p><strong><%= @status %></strong></p>
+  <% end %>
+
+</div>
